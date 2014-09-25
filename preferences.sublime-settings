@@ -1,0 +1,32 @@
+{
+  "close_windows_when_empty": true,
+  "color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
+  "ensure_newline_at_eof_on_save": true,
+  "font_face": "Inconsolata-g",
+  "font_options":
+  [
+    "no_italic",
+    "no_bold"
+  ],
+  "font_size": 12.0,
+  "highlight_line": false,
+  "ignored_packages":
+  [
+  ],
+  "line_numbers": true,
+  "line_padding_top": 0,
+  "margin": 0,
+  "match_brackets_braces": true,
+  "match_brackets_content": true,
+  "match_brackets_square": true,
+  "rulers":
+  [
+    80
+  ],
+  "tab_size": 2,
+  "theme": "Spacegray.sublime-theme",
+  "translate_tabs_to_spaces": true,
+  "trim_trailing_white_space_on_save": true,
+  "use_simple_full_screen": true
+}
+
