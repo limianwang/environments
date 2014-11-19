@@ -1,7 +1,18 @@
-
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
 [color]
-  ui = true
-  diff = true
+	ui = true
+	diff = true
+	status = true
+[push]
+	default = simple
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 [alias]
   st = status
   br = branch
@@ -13,5 +24,3 @@
   squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\"; };f"
   hdiff = whatchanged -p --abbrev-commit --pretty=medium
   cmp = diff develop
-[push]
-  default = simple
