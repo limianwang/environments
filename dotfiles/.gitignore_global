@@ -1,5 +1,7 @@
 *~
 
+*.swp
+
 # Logs
 logs
 *.log
