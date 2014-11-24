@@ -1,4 +1,3 @@
-
 "
 " Syntax file are located under ~/.vim/syntax/*
 "
@@ -6,17 +5,40 @@
 " javascript syntax: http://www.vim.org/scripts/script.php?script_id=1491
 " markdown: https://github.com/plasticboy/vim-markdown
 
+set nocompatible
+
+" Pathogen stuff
+execute pathogen#infect()
+call pathogen#helptags()
+
 syntax on
 
-set nocompatible
+set backspace=2
+
+set number
+set showcmd
+set hidden
+set wildmenu
+set nostartofline
+set ruler
+
+" Search
+set hlsearch
+set incsearch
+
+" no backup or swap files
+set nobackup
+set noswapfile
+
+set background=light
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
 
 set autoindent
+set copyindent
 set smartindent
-set incsearch
 set ignorecase
 set smartcase
 set showmatch

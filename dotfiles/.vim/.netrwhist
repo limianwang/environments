@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/limianwang/Downloads/ferrum/communis3'
+let g:netrw_dirhist_2='/Users/limianwang/workspace/node/ag/airgbuzzbackend/lib/passport'
+let g:netrw_dirhist_3='/Users/limianwang/workspace/node/ag/airgbuzzbackend/lib/routes/auth'
+let g:netrw_dirhist_4='/Users/limianwang/workspace/node/github/osmos/lib/drivers/mysql'
+let g:netrw_dirhist_5='/Users/limianwang/workspace/node/github/osmos/lib/drivers'
