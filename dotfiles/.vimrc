@@ -65,3 +65,5 @@ autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 smartcase autoindent
 " 80 width
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "match OverLength /\%91v.\+/
+
+au VimLeave * if filereadable("~/.vim/.netrwhist")|call delete("~/.vim/.netrwhist")|endif
