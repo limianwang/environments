@@ -16,6 +16,7 @@
 [alias]
   st = status
   br = branch
+  dt = "!f(){ git tag -d ${1} && git push origin :refs/tags/${1}; };f"
   co = checkout
   cob = checkout -b
   lol = log --pretty=format:'%Cred%h%Creset - %C(cyan)%ad%Creset |%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue[%an]%Creset' --abbrev-commit --decorate --date=short
