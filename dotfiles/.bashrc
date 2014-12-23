@@ -24,6 +24,10 @@ function parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
 }
 
+# http://apple.stackexchange.com/questions/55875/git-auto-complete-for-branches-at-the-command-line
+# curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+test -f ~/.git-completion.bash && . $_
+
 BLUE="\[\e[0;34m\]";
 GREEN="\[\e[0;32m\]";
 CYAN="\[\e[0;36m\]";
