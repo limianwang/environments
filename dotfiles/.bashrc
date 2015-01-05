@@ -21,7 +21,14 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH";
 
 # Parse the git branch of the folder
 function parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1] /'
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)$(parse_git_stash)]/"
+}
+
+function parse_git_dirty {
+    [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
+}
+function parse_git_stash {
+    [[ $(git stash list 2> /dev/null | tail -n1) != "" ]] && echo "^"
 }
 
 # http://apple.stackexchange.com/questions/55875/git-auto-complete-for-branches-at-the-command-line
