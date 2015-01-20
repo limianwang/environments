@@ -5,6 +5,8 @@ alias cdmx="cd ~/workspace"
 alias node='node --harmony'
 alias n10start="nvm deactivate; nvm use 0.10.33"
 alias n11start="nvm deactivate; nvm use 0.11.14"
+alias brewup='brew update && brew upgrade'
+alias reload='source ~/.bashrc'
 
 export EDITOR=vim
 export GREP_OPTIONS='--color=auto'
@@ -21,7 +23,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH";
 
 # Parse the git branch of the folder
 function parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)$(parse_git_stash)]/"
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty)$(parse_git_stash)) /"
 }
 
 function parse_git_dirty {
@@ -53,7 +55,7 @@ if [ $ITERM_SESSION_ID ]; then
   export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
 fi
 
-export PS1="$CYAN\u$NO_COLOUR:$YELLOW\W$NO_COLOUR $RED\$(parse_git_branch)$NO_COLOUR[$RED\j$NO_COLOUR]\n$ "
+export PS1="$CYAN\u$NO_COLOUR:$YELLOW\w$NO_COLOUR $RED\$(parse_git_branch)$NO_COLOUR[$RED\j$NO_COLOUR]\n$ "
 
 # Docker
 export DOCKER_HOST=tcp://192.168.59.103:2376
