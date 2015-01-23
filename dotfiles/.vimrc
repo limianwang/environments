@@ -61,6 +61,7 @@ au BufRead,BufNewFile *.js set filetype=javascript
 
 " tab spacing based on file extensions
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 smartcase autoindent
+autocmd Filetype jade setlocal ts=2 sts=2 sw=2
 
 " 80 width
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
