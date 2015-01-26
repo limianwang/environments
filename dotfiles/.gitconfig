@@ -1,27 +1,27 @@
 [core]
-  editor = vim
-  excludesfile = ~/.gitignore_global
+	editor = vim
+	excludesfile = ~/.gitignore_global
 [color]
-  ui = true
-  diff = true
-  status = true
+	ui = true
+	diff = true
+	status = true
 [push]
-  default = simple
+	default = simple
 [difftool "sourcetree"]
-  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-  path = 
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
 [mergetool "sourcetree"]
-  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-  trustExitCode = true
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 [alias]
-  st = status
-  br = branch
-  dt = "!f(){ git tag -d ${1} && git push origin :refs/tags/${1}; };f"
-  co = checkout
-  cob = checkout -b
-  lol = log --pretty=format:'%Cred%h%Creset - %C(cyan)%ad%Creset |%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue[%an]%Creset' --abbrev-commit --decorate --date=short
-  clear = remote prune origin
-  who = shortlog -s -n --no-merges
-  squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\"; };f"
-  hdiff = whatchanged -p --abbrev-commit --pretty=medium
-  cmp = diff develop
+	st = status
+	br = branch
+	dt = "!f(){ git tag -d ${1} && git push origin :refs/tags/${1}; };f"
+	co = checkout
+	cob = checkout -b
+	lol = log --pretty=format:'%Cred%h%Creset - %C(cyan)%ad%Creset |%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue[%an]%Creset' --abbrev-commit --decorate --date=short
+	clear = remote prune origin
+	who = shortlog -s -n --no-merges
+	squash = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\"; };f"
+	hdiff = whatchanged -p --abbrev-commit --pretty=medium
+	cmp = diff develop
