@@ -13,6 +13,9 @@ call pathogen#helptags()
 
 syntax on
 
+let g:hybrid_use_iTerm_colors = 1
+colorscheme hybrid
+
 set backspace=2
 
 set number
