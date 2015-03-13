@@ -7,9 +7,20 @@
 
 set nocompatible
 
-" Pathogen stuff
-execute pathogen#infect()
-call pathogen#helptags()
+" Vundle
+filetype plugin indent off
+filetype off
+syntax off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'flazz/vim-colorschemes'
+Plugin 'pangloss/vim-javascript'
+
+call vundle#end()
+
+filetype plugin indent on
 
 syntax on
 
