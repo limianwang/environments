@@ -15,10 +15,14 @@ syntax off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'gmarik/Vundle.vim'
+
 Plugin 'flazz/vim-colorschemes'
 Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'kien/ctrlp.vim'
+Plugin 'fatih/vim-go'
+Plugin 'elzr/vim-json'
 
 call vundle#end()
 
@@ -29,55 +33,44 @@ syntax on
 let g:hybrid_use_iTerm_colors = 1
 colorscheme hybrid
 
-set backspace=2
-
+" Generic
 set number
+set visualbell
+set nowrap
 set showcmd
-set hidden
+set ruler
 set wildmenu
 set nostartofline
-set ruler
-
-" Search
-set hlsearch
-set incsearch
-
-" no backup or swap files
-set nobackup
-set noswapfile
-
-set background=light
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set expandtab
-
-set autoindent
-set copyindent
-set smartindent
-set ignorecase
-set smartcase
-set showmatch
 set splitbelow
 set splitright
 
-set formatoptions+=r
-set nowrap
-set visualbell
+" enable smart search
+set incsearch
+set hlsearch
+set ignorecase
+set showmatch
 
-" Removing trailing white spaces.
+" No Backup
+set nobackup
+set noswapfile
+
+set autoindent
+set smartindent
+set smartcase
+
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
+
+" vim-markdown
+let g:vim_markdown_folding_disabled=1
+
 autocmd BufWritePre *.js :%s/\s\+$//e
-autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePre *.coffee :%s/\s\+$//e
 
-" Adding syntax based on file extension
-au BufRead,BufNewFile *.coffee set filetype=coffee
-au BufRead,BufNewFile *.md set filetype=md
-au BufRead,BufNewFile *.js set filetype=javascript
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 
-" tab spacing based on file extensions
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 smartcase autoindent
-autocmd Filetype jade setlocal ts=2 sts=2 sw=2
+au VimLeave * if filereadable("~/.vim/.netrwhist")|call delete("~/.vim/.netrwhist")|endif
 
 " 80 width
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
