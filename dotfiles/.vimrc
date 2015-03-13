@@ -17,6 +17,8 @@ call vundle#begin()
 
 Plugin 'flazz/vim-colorschemes'
 Plugin 'pangloss/vim-javascript'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()
 
