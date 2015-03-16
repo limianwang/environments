@@ -1,0 +1,6 @@
+# ignore certain folders
+
+--ignore-dir=coverage/
+--ignore-dir=node_modules/
+
+--sort-files
