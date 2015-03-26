@@ -40,6 +40,9 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
+" vim-markdown
+let g:vim_markdown_folding_disabled=1
+
 " Generic
 set laststatus=2
 set backspace=2
@@ -70,9 +73,6 @@ set smartcase
 set tabstop=4
 set shiftwidth=4
 set noexpandtab
-
-" vim-markdown
-let g:vim_markdown_folding_disabled=1
 
 autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd BufWritePre *.coffee :%s/\s\+$//e
