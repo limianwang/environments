@@ -23,6 +23,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
 Plugin 'elzr/vim-json'
+Plugin 'bling/vim-airline'
 
 call vundle#end()
 
@@ -30,10 +31,17 @@ filetype plugin indent on
 
 syntax on
 
-let g:hybrid_use_iTerm_colors = 1
 colorscheme hybrid
+let g:hybrid_use_iTerm_colors = 1
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 " Generic
+set laststatus=2
 set backspace=2
 set number
 set visualbell
