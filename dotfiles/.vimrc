@@ -22,6 +22,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
+Plugin 'Blackrush/vim-gocode'
 Plugin 'elzr/vim-json'
 Plugin 'bling/vim-airline'
 

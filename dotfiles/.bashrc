@@ -64,3 +64,4 @@ export DOCKER_TLS_VERIFY=1
 
 # Go
 export GOPATH=~/workspace/go
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
