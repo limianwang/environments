@@ -62,6 +62,10 @@ export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=~/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 
+# Postgres
+alias pg='postgres'
+export PGDATA=/usr/local/var/postgres/
+
 # Go
 export GOPATH=~/workspace/go
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
