@@ -25,6 +25,7 @@ Plugin 'fatih/vim-go'
 Plugin 'Blackrush/vim-gocode'
 Plugin 'elzr/vim-json'
 Plugin 'bling/vim-airline'
+Bundle 'majutsushi/tagbar'
 
 call vundle#end()
 
@@ -74,6 +75,9 @@ set smartcase
 set tabstop=4
 set shiftwidth=4
 set noexpandtab
+
+" vim-markdown
+let g:vim_markdown_folding_disabled=1
 
 autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd BufWritePre *.coffee :%s/\s\+$//e
