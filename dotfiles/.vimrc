@@ -22,10 +22,9 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
-Plugin 'Blackrush/vim-gocode'
 Plugin 'elzr/vim-json'
 Plugin 'bling/vim-airline'
-Bundle 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 
 call vundle#end()
 
@@ -79,6 +78,11 @@ set noexpandtab
 " vim-markdown
 let g:vim_markdown_folding_disabled=1
 
+" CtrlP
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+autocmd VimEnter * nested :TagbarOpen
+
 autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd BufWritePre *.coffee :%s/\s\+$//e
 
@@ -90,5 +94,3 @@ au VimLeave * if filereadable("~/.vim/.netrwhist")|call delete("~/.vim/.netrwhis
 " 80 width
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "match OverLength /\%91v.\+/
-
-au VimLeave * if filereadable("~/.vim/.netrwhist")|call delete("~/.vim/.netrwhist")|endif
