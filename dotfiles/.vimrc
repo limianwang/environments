@@ -17,11 +17,13 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
+Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
+Plugin 'Blackrush/vim-gocode'
 Plugin 'elzr/vim-json'
 Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
@@ -82,14 +84,17 @@ let g:vim_markdown_folding_disabled=1
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 autocmd VimEnter * nested :TagbarOpen
+" autocmd VimEnter * nested :NERDTree
 
 autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd BufWritePre *.coffee :%s/\s\+$//e
-
+autocmd BufWritePre * :%s/\s\+$//e
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype json setlocal ts=2 sts=2 sw=2 expandtab
 
 au VimLeave * if filereadable("~/.vim/.netrwhist")|call delete("~/.vim/.netrwhist")|endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+map <C-n> :NERDTreeToggle<CR>
 
 " 80 width
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
