@@ -3,8 +3,6 @@ alias ll="ls -l";
 alias cdm="cd ~/projects"
 alias cdmx="cd ~/workspace"
 alias node='node --harmony'
-alias n10start="nvm deactivate; nvm use 0.10.33"
-alias n11start="nvm deactivate; nvm use 0.11.14"
 alias brewup='brew update && brew upgrade'
 alias reload='source ~/.bashrc'
 
@@ -48,7 +46,7 @@ NO_COLOUR="\[\e[m\]";
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
-hash node 2>/dev/null || { n11start; }
+hash node 2>/dev/null || { nvm 0.12; }
 
 if [ $ITERM_SESSION_ID ]; then
   unset PROMPT_COMMAND;
@@ -67,5 +65,7 @@ alias pg='postgres'
 export PGDATA=/usr/local/var/postgres/
 
 # Go
-export GOPATH=~/workspace/go
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export GOPATH=~/dev/go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
