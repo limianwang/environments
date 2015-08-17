@@ -55,10 +55,21 @@ fi
 
 export PS1="$CYAN\u$NO_COLOUR:$YELLOW\w$NO_COLOUR $RED\$(parse_git_branch)$NO_COLOUR[$RED\j$NO_COLOUR]\n$ "
 
-# Docker
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=~/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+# Docker (boot2docker)
+#
+# export DOCKER_HOST=tcp://192.168.59.103:2376
+# export DOCKER_CERT_PATH=~/.boot2docker/certs/boot2docker-vm
+# export DOCKER_TLS_VERIFY=1
+
+# Docker-machine
+function init_docker {
+	env="default"
+	if [ ! -z "$1" ]; then
+		env=$1
+	fi
+	eval $(docker-machine env $env)
+}
+alias docker-init=init_docker
 
 # Postgres
 alias pg='postgres'
