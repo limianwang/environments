@@ -1,4 +1,3 @@
-
 alias ll="ls -l";
 alias cdm="cd ~/projects"
 alias cdmx="cd ~/workspace"
@@ -69,7 +68,16 @@ function init_docker {
 	fi
 	eval $(docker-machine env $env)
 }
+
+function find_docker_ip {
+	env="default"
+	if [ ! -z "$1" ]; then
+		env=$1
+	fi
+	echo $(docker-machine ip $env)
+}
 alias docker-init=init_docker
+alias docker-ip=find_docker_ip
 
 # Postgres
 alias pg='postgres'
