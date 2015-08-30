@@ -26,6 +26,7 @@ function parse_git_branch() {
 function parse_git_dirty {
     [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "*"
 }
+
 function parse_git_stash {
     [[ $(git stash list 2> /dev/null | tail -n1) != "" ]] && echo "^"
 }
@@ -76,6 +77,7 @@ function find_docker_ip {
 	fi
 	echo $(docker-machine ip $env)
 }
+
 alias docker-init=init_docker
 alias docker-ip=find_docker_ip
 
