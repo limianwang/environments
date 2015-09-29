@@ -90,6 +90,7 @@ autocmd BufWritePre *.coffee :%s/\s\+$//e
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype json setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 au VimLeave * if filereadable("~/.vim/.netrwhist")|call delete("~/.vim/.netrwhist")|endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
