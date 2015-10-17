@@ -21,6 +21,7 @@ brew install mysql
 # Install Homebrew Caskroom
 brew install caskroom/cask/brew-cask
 brew cask install iterm2
+brew cask install virtualbox
 
 # Remove outdated versions from the cellar.
 brew cleanup -s
