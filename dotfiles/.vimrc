@@ -23,6 +23,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
+Plugin 'kchmck/vim-coffee-script'
 Plugin 'elzr/vim-json'
 Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
@@ -88,6 +89,7 @@ autocmd VimEnter * nested :TagbarOpen
 autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd BufWritePre *.coffee :%s/\s\+$//e
 autocmd BufWritePre * :%s/\s\+$//e
+autocmd Filetype coffee setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype json setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype gitcommit setlocal spell textwidth=72

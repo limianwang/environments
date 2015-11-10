@@ -31,6 +31,12 @@ function parse_git_stash {
     [[ $(git stash list 2> /dev/null | tail -n1) != "" ]] && echo "^"
 }
 
+function list_deps {
+	brew list | while read cask; do echo -n "$cask ->"; brew deps $cask | awk '{printf(" %s ", $0)}'; echo ""; done
+}
+
+alias deps=list_deps
+
 # http://apple.stackexchange.com/questions/55875/git-auto-complete-for-branches-at-the-command-line
 # curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 test -f ~/.git-completion.bash && . $_
