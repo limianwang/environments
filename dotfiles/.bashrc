@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 alias ll="ls -l";
 alias cdm="cd ~/projects"
 alias cdmx="cd ~/workspace"
