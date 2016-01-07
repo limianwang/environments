@@ -25,3 +25,27 @@ brew cask install virtualbox
 
 # Remove outdated versions from the cellar.
 brew cleanup -s
+
+# Atom packages
+pkgs=(
+"atom-beautify"
+"atom-material-ui"
+"atom-terminal"
+"docblockr"
+"editorconfig"
+"file-icons"
+"go-plus"
+"language-docker"
+"language-terraform"
+"minimap"
+"react"
+"seti-syntax"
+"seti-ui"
+"todo-show"
+"vim-mode"
+)
+
+for i in "${pkgs[@]}"
+do
+	echo "apm install $i"
+done
