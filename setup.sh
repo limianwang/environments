@@ -31,11 +31,14 @@ pkgs=(
 "atom-beautify"
 "atom-material-ui"
 "atom-terminal"
+"base16-ocean-dark-syntax"
 "docblockr"
 "editorconfig"
 "file-icons"
+"git-plus"
 "go-plus"
 "language-docker"
+"language-jade"
 "language-terraform"
 "minimap"
 "react"
@@ -47,5 +50,5 @@ pkgs=(
 
 for i in "${pkgs[@]}"
 do
-	echo "apm install $i"
+	apm install $i
 done
