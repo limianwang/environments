@@ -34,7 +34,7 @@ function parse_git_stash {
 }
 
 function list_deps {
-	brew list | while read cask; do echo -n "$cask ->"; brew deps $cask | awk '{printf(" %s ", $0)}'; echo ""; done
+    brew list | while read cask; do echo -n "$cask ->"; brew deps $cask | awk '{printf(" %s ", $0)}'; echo ""; done
 }
 
 alias deps=list_deps
@@ -71,19 +71,19 @@ export PS1="$CYAN\u$NO_COLOUR:$YELLOW\w$NO_COLOUR $RED\$(parse_git_branch)$NO_CO
 
 # Docker-machine
 function init_docker {
-	env="default"
-	if [ ! -z "$1" ]; then
-		env=$1
-	fi
-	eval $(docker-machine env $env)
+    env="default"
+    if [ ! -z "$1" ]; then
+        env=$1
+    fi
+    eval $(docker-machine env $env)
 }
 
 function find_docker_ip {
-	env="default"
-	if [ ! -z "$1" ]; then
-		env=$1
-	fi
-	echo $(docker-machine ip $env)
+    env="default"
+    if [ ! -z "$1" ]; then
+        env=$1
+    fi
+    echo $(docker-machine ip $env)
 }
 
 alias docker-init=init_docker
