@@ -61,7 +61,7 @@ if [ $ITERM_SESSION_ID ]; then
   export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
 fi
 
-export PS1="$CYAN\u$NO_COLOUR:$YELLOW\w$NO_COLOUR $RED\$(parse_git_branch)$NO_COLOUR[$RED\j$NO_COLOUR]\n$ "
+export PS1="$CYAN\u$NO_COLOUR:$YELLOW\w$NO_COLOUR $RED\$(parse_git_branch)$NO_COLOUR[$RED\j$NO_COLOUR]$YELLOW\n⚡$NO_COLOUR "
 
 # Docker (boot2docker)
 #
