@@ -6,9 +6,16 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade --all
 
+# Install Homebrew Caskroom
+brew install caskroom/cask/brew-cask
+brew cask install iterm2
+brew cask install virtualbox
+
 brew install bash
 brew install vim
 
+brew install docker-machine
+brew install docker
 brew install ack
 brew install git
 brew install git-extras
@@ -18,10 +25,7 @@ brew install redis
 brew install mongodb
 brew install mysql
 
-# Install Homebrew Caskroom
-brew install caskroom/cask/brew-cask
-brew cask install iterm2
-brew cask install virtualbox
+brew cask cleanup
 
 # Remove outdated versions from the cellar.
 brew cleanup -s

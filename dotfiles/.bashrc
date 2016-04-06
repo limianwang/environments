@@ -54,7 +54,7 @@ NO_COLOUR="\[\e[m\]";
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
-hash node 2>/dev/null || { nvm 0.12; }
+hash node 2>/dev/null || { nvm use 5; }
 
 if [ $ITERM_SESSION_ID ]; then
   unset PROMPT_COMMAND;
