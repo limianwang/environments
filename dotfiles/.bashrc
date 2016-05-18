@@ -71,23 +71,29 @@ export PS1="$CYAN\u$NO_COLOUR:$YELLOW\w$NO_COLOUR $RED\$(parse_git_branch)$NO_CO
 
 # Docker-machine
 function init_docker {
-    env="default"
-    if [ ! -z "$1" ]; then
-        env=$1
-    fi
-    eval $(docker-machine env $env)
+	env="default"
+	if [ ! -z "$1" ]; then
+		env=$1
+	fi
+	eval $(docker-machine env $env)
 }
 
 function find_docker_ip {
-    env="default"
-    if [ ! -z "$1" ]; then
-        env=$1
-    fi
-    echo $(docker-machine ip $env)
+	env="default"
+	if [ ! -z "$1" ]; then
+		env=$1
+	fi
+	echo $(docker-machine ip $env)
 }
 
-alias docker-init=init_docker
-alias docker-ip=find_docker_ip
+function remove_docker {
+	eval $(docker rmi -f $(docker images -f "dangling=true" -q))
+}
+
+alias dc=remove_docker
+alias di=init_docker
+alias dip=find_docker_ip
+alias dm='docker-machine'
 
 # Postgres
 alias pg='postgres'
