@@ -50,6 +50,7 @@ pkgs=(
 "gofmt"
 "gometalinter-linter"
 "gorename"
+"hybrid-next-syntax"
 "language-docker"
 "language-jade"
 "language-terraform"
