@@ -19,7 +19,7 @@
 	cp = cherry-pick
 	br = branch
 	dt = "!f(){ git tag -d ${1} && git push origin :refs/tags/${1}; };f"
-	db = "!f(){ git push origin --delete ${1}; };f"
+	blitz = "!f(){ git push origin --delete ${1}; };f"
 	co = checkout
 	cob = checkout -b
 	lol = log --pretty=format:'%Cred%h%Creset - %C(cyan)%ad%Creset |%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue[%an]%Creset' --abbrev-commit --decorate --date=short
