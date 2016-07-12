@@ -11,6 +11,7 @@ brew install caskroom/cask/brew-cask
 brew cask install iterm2
 brew cask install virtualbox
 
+brew install gpg2
 brew install bash
 brew install vim
 
