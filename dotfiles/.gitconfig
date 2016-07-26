@@ -30,3 +30,5 @@
 	cmp = diff develop
 [pull]
 	rebase = true
+[branch]
+	autosetuprebase = always
