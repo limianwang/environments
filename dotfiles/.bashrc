@@ -61,7 +61,8 @@ if [ $ITERM_SESSION_ID ]; then
   export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
 fi
 
-export PS1="$CYAN\u$NO_COLOUR:$YELLOW\w$NO_COLOUR $RED\$(parse_git_branch)$NO_COLOUR[$RED\j$NO_COLOUR]$YELLOW\n⚡$NO_COLOUR "
+#export PS1="$CYAN\u$NO_COLOUR:$YELLOW\w$NO_COLOUR $RED\$(parse_git_branch)$NO_COLOUR[$RED\j$NO_COLOUR]$YELLOW\n⚡$NO_COLOUR "
+export PS1="$CYAN\u$NO_COLOUR@$BLUE\h$NO_COLOUR:$YELLOW\w$NO_COLOUR $RED\$(parse_git_branch)$NO_COLOUR($RED\j$NO_COLOUR)\n$YELLOW=>$NO_COLOUR "
 
 # Docker (boot2docker)
 #
@@ -69,30 +70,10 @@ export PS1="$CYAN\u$NO_COLOUR:$YELLOW\w$NO_COLOUR $RED\$(parse_git_branch)$NO_CO
 # export DOCKER_CERT_PATH=~/.boot2docker/certs/boot2docker-vm
 # export DOCKER_TLS_VERIFY=1
 
-# Docker-machine
-function init_docker {
-	env="default"
-	if [ ! -z "$1" ]; then
-		env=$1
-	fi
-	eval $(docker-machine env $env)
-}
-
-function find_docker_ip {
-	env="default"
-	if [ ! -z "$1" ]; then
-		env=$1
-	fi
-	echo $(docker-machine ip $env)
-}
-
-function remove_docker {
-	eval $(docker rmi -f $(docker images -f "dangling=true" -q))
-}
-
-alias dc=remove_docker
-alias di=init_docker
-alias dip=find_docker_ip
+# Docker commands
+# eval $(docker-machine env)
+# docker rmi -f $(docker images -f "dangling=true" -q)
+alias dc='docker-compose'
 alias dm='docker-machine'
 
 # Postgres
