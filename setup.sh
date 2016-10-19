@@ -4,13 +4,14 @@
 brew update
 
 # Upgrade any already-installed formulae.
-brew upgrade --all
+brew upgrade
 
 # Install Homebrew Caskroom
 brew install caskroom/cask/brew-cask
 brew cask install iterm2
 brew cask install virtualbox
 
+brew install bash-completion
 brew install gpg2
 brew install bash
 brew install vim
