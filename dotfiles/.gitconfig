@@ -21,6 +21,7 @@
 	br = branch
 	dt = "!f(){ git tag -d ${1} && git push origin :refs/tags/${1}; };f"
 	co = checkout
+	cbb = "!f(){ git checkout -b \"lw-$1\"; };f"
 	cob = checkout -b
 	lol = log --pretty=format:'%Cred%h%Creset - %C(cyan)%ad%Creset |%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue[%an]%Creset' --abbrev-commit --decorate --date=short
 	lg = log --format=format:'%C(bold cyan)%ar %C(reset) %C(green)%f %C(reset) %C(blue)(%an)' --name-status
@@ -29,7 +30,10 @@
 	sqsh = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\"; };f"
 	hdiff = whatchanged -p --abbrev-commit --pretty=medium
 	cmp = diff develop
+	lb = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
 [pull]
 	rebase = true
 [branch]
 	autosetuprebase = always
+[http "https://gopkg.in"]
+	followRedirects = true
