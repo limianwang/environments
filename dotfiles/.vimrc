@@ -80,9 +80,6 @@ set tabstop=4
 set shiftwidth=4
 set noexpandtab
 
-" vim-markdown
-let g:vim_markdown_folding_disabled=1
-
 " CtrlP
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
