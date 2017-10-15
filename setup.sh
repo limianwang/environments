@@ -16,6 +16,7 @@ brew install gpg2
 brew install bash
 brew install vim
 
+brew install ctags
 brew install docker-machine
 brew install docker
 brew install ack
