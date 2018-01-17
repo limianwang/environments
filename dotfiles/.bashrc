@@ -54,7 +54,7 @@ NO_COLOUR="\[\e[m\]";
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
-hash node 2>/dev/null || { nvm use 5; }
+hash node 2>/dev/null || { nvm use 8; }
 
 if [ $ITERM_SESSION_ID ]; then
   unset PROMPT_COMMAND;
@@ -62,7 +62,7 @@ if [ $ITERM_SESSION_ID ]; then
 fi
 
 #export PS1="$CYAN\u$NO_COLOUR:$YELLOW\w$NO_COLOUR $RED\$(parse_git_branch)$NO_COLOUR[$RED\j$NO_COLOUR]$YELLOW\n⚡$NO_COLOUR "
-export PS1="$CYAN\u$NO_COLOUR@$BLUE\h$NO_COLOUR:$YELLOW\w$NO_COLOUR $RED\$(parse_git_branch)$NO_COLOUR($RED\j$NO_COLOUR)\n$YELLOW=>$NO_COLOUR "
+export PS1="$CYAN\u$NO_COLOUR@$BLUE\h$NO_COLOUR:$YELLOW\w$NO_COLOUR $RED\$(parse_git_branch)$NO_COLOUR($RED\j$NO_COLOUR)\nλ $YELLOW=>$NO_COLOUR "
 
 # Docker (boot2docker)
 #
