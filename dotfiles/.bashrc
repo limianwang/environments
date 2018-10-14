@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-alias ll="ls -l";
-alias cdm="cd ~/projects"
-alias cdmx="cd ~/workspace"
-alias node='node --harmony'
-alias brewup='brew update && brew upgrade'
-alias reload='source ~/.bashrc'
-
 export EDITOR=vim
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='0;32'
@@ -85,3 +78,10 @@ export GOPATH=~/dev/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+
+# aliases
+alias ll="ls -l";
+alias cdm="cd ~/dev"
+alias cdg="cd $GOPATH/src"
+alias brewup='brew update && brew upgrade'
+alias reload='source ~/.bashrc'
