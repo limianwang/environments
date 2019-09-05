@@ -1,0 +1,65 @@
+{
+    "window.zoomLevel": 0,
+    "auto-close-tag.activationOnLanguage": [
+        "xml",
+        "php",
+        "blade",
+        "ejs",
+        "jinja",
+        "javascript",
+        "javascriptreact",
+        "plaintext",
+        "markdown",
+        "vue",
+        "liquid",
+        "erb",
+        "lang-cfml",
+        "cfml",
+        "HTML (Eex)"
+    ],
+    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+    "editor.fontFamily": "Input Mono",
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "variable.language",
+                    "keyword.control"
+                ],
+                "settings": {
+                    "fontStyle": ""
+                }
+            }
+        ]
+    },
+    "files.trimTrailingWhitespace": true,
+    "atomKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "javascript.implicitProjectConfig.experimentalDecorators": true,
+    "workbench.colorTheme": "Crackpot Contrast (rainglow)",
+    "files.insertFinalNewline": true,
+    "terminal.integrated.shellArgs.osx": [],
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "editor.tabCompletion": "on",
+    "workbench.fontAliasing": "auto",
+    "terminal.integrated.fontSize": 16,
+    "typescript.preferences.quoteStyle": "single",
+    "editor.minimap.enabled": false,
+    "importSorter.generalConfiguration.sortOnBeforeSave": true,
+    "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
+    "importSorter.importStringConfiguration.tabSize": 2,
+    "window.nativeFullScreen": false,
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.singleQuote": true,
+    "prettier.requireConfig": true,
+    "editor.formatOnSave": true,
+    "editor.fontSize": 13
+}
+
