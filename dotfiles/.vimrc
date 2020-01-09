@@ -19,6 +19,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'rainglow/vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'kien/ctrlp.vim'
@@ -27,6 +28,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'elzr/vim-json'
 Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'vim-python/python-syntax'
 
 call vundle#end()
 
@@ -45,6 +48,9 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+" vim-python
+let g:python_highlight_all = 1
 
 " vim-markdown
 let g:vim_markdown_folding_disabled=1
@@ -92,6 +98,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype json setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype python setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
 au VimLeave * if filereadable("~/.vim/.netrwhist")|call delete("~/.vim/.netrwhist")|endif
