@@ -1,5 +1,4 @@
 {
-    "window.zoomLevel": 0,
     "auto-close-tag.activationOnLanguage": [
         "xml",
         "php",
@@ -17,9 +16,53 @@
         "cfml",
         "HTML (Eex)"
     ],
+    "importSorter.generalConfiguration.sortOnBeforeSave": true,
+    "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
+    "importSorter.importStringConfiguration.tabSize": 2,
+
+    "javascript.implicitProjectConfig.experimentalDecorators": true,
     "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
-    "editor.fontFamily": "Input Mono",
+    "atomKeymap.promptV3Features": true,
+
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.preferences.quoteStyle": "single",
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+
+    "terminal.integrated.shellArgs.osx": [],
+    "terminal.integrated.fontSize": 14,
+    "vim.statusBarColorControl": false,
+
+    "window.zoomLevel": 0,
+    "window.nativeFullScreen": false,
+    "window.newWindowDimensions": "inherit",
+    "window.restoreWindows": "all",
+
+    "workbench.colorTheme": "Yitzchok Contrast (rainglow)",
+    "workbench.fontAliasing": "auto",
+
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.formatOnPaste": true,
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 15,
+    "editor.tabCompletion": "on",
     "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
+    },
+    "editor.fontFamily": "Consolas",
+    "editor.fontLigatures": false,
     "editor.wordWrap": "on",
     "editor.tokenColorCustomizations": {
         "textMateRules": [
@@ -34,32 +77,7 @@
             }
         ]
     },
-    "files.trimTrailingWhitespace": true,
-    "atomKeymap.promptV3Features": true,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.formatOnPaste": true,
-    "javascript.implicitProjectConfig.experimentalDecorators": true,
-    "workbench.colorTheme": "Crackpot Contrast (rainglow)",
-    "files.insertFinalNewline": true,
-    "terminal.integrated.shellArgs.osx": [],
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "editor.tabCompletion": "on",
-    "workbench.fontAliasing": "auto",
-    "terminal.integrated.fontSize": 16,
-    "typescript.preferences.quoteStyle": "single",
-    "editor.minimap.enabled": false,
-    "importSorter.generalConfiguration.sortOnBeforeSave": true,
-    "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
-    "importSorter.importStringConfiguration.tabSize": 2,
-    "window.nativeFullScreen": false,
-    "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+    "go.useLanguageServer": true,
     "prettier.singleQuote": true,
-    "prettier.requireConfig": true,
-    "editor.formatOnSave": true,
-    "editor.fontSize": 13
+    "prettier.requireConfig": true
 }
-
