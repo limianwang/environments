@@ -85,6 +85,9 @@ set smartcase
 set tabstop=4
 set shiftwidth=4
 set noexpandtab
+set textwidth=99
+
+set colorcolumn=100
 
 " CtrlP
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
@@ -96,6 +99,8 @@ autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd BufWritePre *.coffee :%s/\s\+$//e
 autocmd BufWritePre * :%s/\s\+$//e
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype json setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype python setlocal ts=4 sts=4 sw=4 expandtab
