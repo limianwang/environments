@@ -21,6 +21,7 @@
 	lol = log --pretty=format:'%Cred%h%Creset - %C(cyan)%ad%Creset |%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue[%an]%Creset' --abbrev-commit --decorate --date=short
 	lot = log --graph --oneline --all
 	lg = log --format=format:'%C(bold cyan)%ar %C(reset) %C(green)%f %C(reset) %C(blue)(%an)' --name-status
+	lot = log --graph --oneline --all
 	clear = remote prune origin
 	who = shortlog -s -n --no-merges
 	sqsh = "!f(){ git reset --soft HEAD~${1} && git commit --edit -m\"$(git log --format=%B --reverse HEAD..HEAD@{1})\"; };f"
