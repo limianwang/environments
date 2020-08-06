@@ -1,6 +1,7 @@
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
+	pager = less -X -F
 [color]
 	ui = true
 	diff = true
@@ -8,12 +9,6 @@
 	interactive = true
 [push]
 	default = simple
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [alias]
 	st = status
 	cp = cherry-pick
@@ -21,7 +16,7 @@
 	br = branch
 	dt = "!f(){ git tag -d ${1} && git push origin :refs/tags/${1}; };f"
 	co = checkout
-	cbb = "!f(){ git checkout -b \"limianwang-$1\"; };f"
+	cbb = "!f(){ git checkout -b \"limianwang/$1\"; };f"
 	cob = checkout -b
 	lol = log --pretty=format:'%Cred%h%Creset - %C(cyan)%ad%Creset |%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue[%an]%Creset' --abbrev-commit --decorate --date=short
 	lot = log --graph --oneline --all
