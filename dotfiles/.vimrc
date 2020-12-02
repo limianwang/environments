@@ -44,15 +44,17 @@ set termguicolors
 let g:tokyonight_style = "night"
 colorscheme tokyonight
 
+
 let g:go_fmt_command = "goimports"
 let g:go_fmt_fail_silently = 1
-
-" vim-go
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_auto_type_info = 1
+" Remap autocomplete
+:inoremap <C-p> <C-x><C-o>
 
 " vim-python
 let g:python_highlight_all = 1
