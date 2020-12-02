@@ -14,7 +14,6 @@ syntax off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'gmarik/Vundle.vim'
 Plugin 'ghifarit53/tokyonight-vim'
 Plugin 'scrooloose/nerdtree'
@@ -30,7 +29,6 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-python/python-syntax'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'pechorin/any-jump.vim'
-
 call vundle#end()
 
 filetype plugin indent on
@@ -46,13 +44,19 @@ colorscheme tokyonight
 
 
 let g:go_fmt_command = "goimports"
-let g:go_fmt_fail_silently = 1
+"let g:go_fmt_fail_silently = 1
+let g:go_fmt_autosave = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_auto_type_info = 1
+let g:go_highlight_diagnostic_errors = 1
+let g:go_highlight_diagnostic_warnings = 1
+let g:go_list_type = "quickfix"
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'errcheck']
 " Remap autocomplete
 :inoremap <C-p> <C-x><C-o>
 
