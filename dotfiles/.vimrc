@@ -16,10 +16,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'ghifarit53/tokyonight-vim'
+Plugin 'pechorin/any-jump.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'itchyny/vim-gitbranch'
+
 Plugin 'fatih/vim-go'
 Plugin 'elzr/vim-json'
 Plugin 'majutsushi/tagbar'
@@ -28,7 +31,6 @@ Plugin 'posva/vim-vue'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-python/python-syntax'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'pechorin/any-jump.vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -42,7 +44,23 @@ set termguicolors
 let g:tokyonight_style = "night"
 colorscheme tokyonight
 
+" lightline
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+      \   'right': [
+      \             ['lineinfo'],
+      \             ['percent'],
+      \             ['fileformat', 'fileencoding', 'filetype']],
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'gitbranch#name'
+      \ },
+      \ }
 
+" vim-go
 let g:go_fmt_command = "goimports"
 "let g:go_fmt_fail_silently = 1
 let g:go_fmt_autosave = 1
@@ -57,8 +75,6 @@ let g:go_highlight_diagnostic_warnings = 1
 let g:go_list_type = "quickfix"
 let g:go_metalinter_autosave = 1
 let g:go_metalinter_autosave_enabled = ['vet', 'errcheck']
-" Remap autocomplete
-:inoremap <C-p> <C-x><C-o>
 
 " vim-python
 let g:python_highlight_all = 1
@@ -93,9 +109,9 @@ set autoindent
 set smartindent
 set smartcase
 
-set tabstop=4
-set shiftwidth=4
-set noexpandtab
+set tabstop=2
+set shiftwidth=2
+set expandtab
 set textwidth=99
 
 set colorcolumn=100
@@ -175,17 +191,12 @@ let g:any_jump_references_only_for_current_filetype = 0
 let g:any_jump_disable_vcs_ignore = 0
 
 autocmd BufWritePre * :%s/\s\+$//e
-autocmd Filetype coffee setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype typescript setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype vue setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype json setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype python setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype gitcommit setlocal spell textwidth=72
+autocmd Filetype go inoremap <C-p> <C-x><C-o>
 
 au VimLeave * if filereadable("~/.vim/.netrwhist")|call delete("~/.vim/.netrwhist")|endif
+
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 map <C-n> :NERDTreeToggle<CR>
 map <C-m> :TagbarToggle<CR>
