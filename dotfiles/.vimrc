@@ -22,6 +22,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'itchyny/vim-gitbranch'
+Plugin 'dense-analysis/ale'
 
 Plugin 'fatih/vim-go'
 Plugin 'elzr/vim-json'
@@ -42,6 +43,7 @@ endif
 set termguicolors
 
 let g:tokyonight_style = "night"
+
 colorscheme tokyonight
 
 " lightline
@@ -60,6 +62,8 @@ let g:lightline = {
       \ },
       \ }
 
+let g:ale_sign_column_always = 1
+
 " vim-go
 let g:go_fmt_command = "goimports"
 "let g:go_fmt_fail_silently = 1
@@ -72,9 +76,6 @@ let g:go_highlight_build_constraints = 1
 let g:go_auto_type_info = 1
 let g:go_highlight_diagnostic_errors = 1
 let g:go_highlight_diagnostic_warnings = 1
-let g:go_list_type = "quickfix"
-let g:go_metalinter_autosave = 1
-let g:go_metalinter_autosave_enabled = ['vet', 'errcheck']
 
 " vim-python
 let g:python_highlight_all = 1
