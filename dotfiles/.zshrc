@@ -2,7 +2,7 @@
 
 setopt prompt_subst
 
-export ZSH="/Users/limianwang/.oh-my-zsh"
+export ZSH="/Users/$USER/.oh-my-zsh"
 export EDITOR=vim
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='0;32'
@@ -11,7 +11,14 @@ plugins=(
 	git
 )
 
-source $ZSH/oh-my-zsh.sh
+test -f $ZSH/oh-my-zsh.sh && . $_
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit -i
+fi
 
 # Exporting colors to the terminal
 # http://osxdaily.com/2012/02/21/add-color-to-the-terminal-in-mac-os-x/
@@ -81,7 +88,7 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
 # Flutter
-export PATH="$PATH:/Users/limianwang/flutter/bin"
+export PATH="$PATH:/Users/$USER/flutter/bin"
 
 # aliases
 alias ll="ls -l";
