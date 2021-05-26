@@ -67,9 +67,12 @@ function initNode()  {
 }
 initNode
 
+precmd() {
+  echo -ne "\e]1;${PWD##*/}\a"
+}
+
 if [ $ITERM_SESSION_ID ]; then
-  unset PROMPT_COMMAND;
-  export PROMPT_COMMAND='echo -ne "\033];${PWD##*/}\007"; ':"$PROMPT_COMMAND";
+   precmd
 fi
 
 export PROMPT='%10F{blue}%n%f@%F{blue}%m:%f%F{yellow}%~%f %F{red}$(parse_git_branch)%f(%F{red}%(1j.%j.0)%f)'$'\n''λ %F{yellow}=>%f '
