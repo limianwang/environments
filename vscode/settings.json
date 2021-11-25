@@ -1,20 +1,20 @@
 {
-    "auto-close-tag.activationOnLanguage": [
-        "xml",
-        "php",
-        "blade",
-        "ejs",
-        "jinja",
-        "javascript",
-        "javascriptreact",
-        "plaintext",
-        "markdown",
-        "vue",
-        "liquid",
-        "erb",
-        "lang-cfml",
-        "cfml",
-        "HTML (Eex)"
+  "auto-close-tag.activationOnLanguage": [
+    "xml",
+    "php",
+    "blade",
+    "ejs",
+    "jinja",
+    "javascript",
+    "javascriptreact",
+    "plaintext",
+    "markdown",
+    "vue",
+    "liquid",
+    "erb",
+    "lang-cfml",
+    "cfml",
+    "HTML (Eex)"
     ],
     "importSorter.generalConfiguration.sortOnBeforeSave": true,
     "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
@@ -33,21 +33,19 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "typescript.preferences.quoteStyle": "single",
     "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+      "editor.defaultFormatter": "vscode.json-language-features"
     },
 
     "terminal.integrated.shellArgs.osx": [],
     "vim.statusBarColorControl": false,
-
-    "window.zoomLevel": 0,
     "window.nativeFullScreen": false,
     "window.newWindowDimensions": "inherit",
     "window.restoreWindows": "all",
 
-    "workbench.colorTheme": "Palenight Theme",
+    "workbench.colorTheme": "GitHub Dark",
     "workbench.fontAliasing": "auto",
 
     "editor.multiCursorModifier": "ctrlCmd",
@@ -57,32 +55,71 @@
     "editor.tabSize": 2,
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-        "source.organizeImports": true
+      "source.organizeImports": true
     },
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": false,
     "editor.wordWrap": "on",
     "editor.tokenColorCustomizations": {
-        "textMateRules": [
-            {
-                "scope": [
-                    "variable.language",
-                    "keyword.control"
-                ],
-                "settings": {
-                    "fontStyle": ""
-                }
-            }
-        ]
+      "textMateRules": [
+        {
+          "scope": [
+            "variable.language",
+            "keyword.control"
+          ],
+          "settings": {
+            "fontStyle": ""
+          }
+        }
+      ]
     },
     "go.useLanguageServer": true,
     "prettier.singleQuote": true,
     "prettier.requireConfig": true,
     "editor.rulers": [
-        100
+      100
     ],
     "workbench.colorCustomizations": {
-        "editorRuler.foreground": "#cfcd4c"
+      "editorRuler.foreground": "#cfcd4c"
     },
-    "editor.links": false
+    "editor.links": false,
+    "dart.flutterHotReloadOnSave": true,
+    "[dart]": {
+      "editor.formatOnSave": true,
+      "editor.formatOnType": true,
+      "editor.rulers": [
+        80
+      ],
+      "editor.selectionHighlight": false,
+      "editor.suggest.snippetsPreventQuickSuggestions": false,
+      "editor.suggestSelection": "first",
+      "editor.tabCompletion": "onlySnippets",
+      "editor.wordBasedSuggestions": false
+    },
+    "extensions.ignoreRecommendations": true,
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.tokenColorCustomizations": {
+      "[Tokyo Night]": { // or "[Tokyo Night Storm]"
+        "textMateRules": [{
+          "scope": [
+            "comment",
+            "meta.var.expr storage.type",
+            "keyword.control.flow",
+            "meta.directive.vue punctuation.separator.key-value.html",
+            "meta.directive.vue entity.other.attribute-name.html",
+            "tag.decorator.js entity.name.tag.js",
+            "tag.decorator.js punctuation.definition.tag.js",
+            "storage.modifier"
+          ],
+          "settings": {
+            "fontStyle": ""
+          }
+        }]
+      }
+    },
+    "go.toolsManagement.autoUpdate": true,
+    "editor.fontSize": 14
 }
+
