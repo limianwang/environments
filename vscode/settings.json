@@ -15,94 +15,80 @@
     "lang-cfml",
     "cfml",
     "HTML (Eex)"
-    ],
-    "importSorter.generalConfiguration.sortOnBeforeSave": true,
-    "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
-    "importSorter.importStringConfiguration.tabSize": 2,
+  ],
 
-    "javascript.implicitProjectConfig.experimentalDecorators": true,
-    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
-    "atomKeymap.promptV3Features": true,
+  "importSorter.generalConfiguration.sortOnBeforeSave": true,
+  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
+  "importSorter.importStringConfiguration.tabSize": 2,
 
-    "files.trimTrailingWhitespace": true,
-    "files.insertFinalNewline": true,
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
 
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
 
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "typescript.preferences.quoteStyle": "single",
-    "[jsonc]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-      "editor.defaultFormatter": "vscode.json-language-features"
-    },
+  "telemetry.enableTelemetry": false,
+  "telemetry.telemetryLevel": "off",
+  "telemetry.enableCrashReporter": false,
 
-    "terminal.integrated.shellArgs.osx": [],
-    "vim.statusBarColorControl": false,
-    "window.nativeFullScreen": false,
-    "window.newWindowDimensions": "inherit",
-    "window.restoreWindows": "all",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.quoteStyle": "single",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
 
-    "workbench.colorTheme": "GitHub Dark",
-    "workbench.fontAliasing": "auto",
+  "terminal.integrated.shellArgs.osx": [],
+  "vim.statusBarColorControl": false,
+  "window.nativeFullScreen": false,
+  "window.newWindowDimensions": "inherit",
+  "window.restoreWindows": "all",
 
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.formatOnPaste": true,
-    "editor.minimap.enabled": false,
-    "editor.tabCompletion": "on",
-    "editor.tabSize": 2,
+  "workbench.colorTheme": "GitHub Dark",
+  "workbench.fontAliasing": "auto",
+
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "editor.minimap.enabled": false,
+  "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": false,
+  "editor.wordWrap": "on",
+  "go.useLanguageServer": true,
+  "prettier.singleQuote": true,
+  "prettier.requireConfig": true,
+  "editor.rulers": [100],
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#cfcd4c"
+  },
+  "editor.links": false,
+  "dart.flutterHotReloadOnSave": true,
+  "[dart]": {
     "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    },
-    "editor.fontFamily": "Fira Code",
-    "editor.fontLigatures": false,
-    "editor.wordWrap": "on",
-    "editor.tokenColorCustomizations": {
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "extensions.ignoreRecommendations": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.tokenColorCustomizations": {
+    "[Tokyo Night]": {
+      // or "[Tokyo Night Storm]"
       "textMateRules": [
         {
-          "scope": [
-            "variable.language",
-            "keyword.control"
-          ],
-          "settings": {
-            "fontStyle": ""
-          }
-        }
-      ]
-    },
-    "go.useLanguageServer": true,
-    "prettier.singleQuote": true,
-    "prettier.requireConfig": true,
-    "editor.rulers": [
-      100
-    ],
-    "workbench.colorCustomizations": {
-      "editorRuler.foreground": "#cfcd4c"
-    },
-    "editor.links": false,
-    "dart.flutterHotReloadOnSave": true,
-    "[dart]": {
-      "editor.formatOnSave": true,
-      "editor.formatOnType": true,
-      "editor.rulers": [
-        80
-      ],
-      "editor.selectionHighlight": false,
-      "editor.suggest.snippetsPreventQuickSuggestions": false,
-      "editor.suggestSelection": "first",
-      "editor.tabCompletion": "onlySnippets",
-      "editor.wordBasedSuggestions": false
-    },
-    "extensions.ignoreRecommendations": true,
-    "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "editor.tokenColorCustomizations": {
-      "[Tokyo Night]": { // or "[Tokyo Night Storm]"
-        "textMateRules": [{
           "scope": [
             "comment",
             "meta.var.expr storage.type",
@@ -111,15 +97,18 @@
             "meta.directive.vue entity.other.attribute-name.html",
             "tag.decorator.js entity.name.tag.js",
             "tag.decorator.js punctuation.definition.tag.js",
-            "storage.modifier"
+            "storage.modifier",
+            "variable.language",
+            "keyword.control"
           ],
           "settings": {
             "fontStyle": ""
           }
-        }]
-      }
-    },
-    "go.toolsManagement.autoUpdate": true,
-    "editor.fontSize": 14
+        }
+      ]
+    }
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "editor.fontSize": 14
 }
 
