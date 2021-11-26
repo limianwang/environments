@@ -17,10 +17,6 @@
     "HTML (Eex)"
   ],
 
-  "importSorter.generalConfiguration.sortOnBeforeSave": true,
-  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
-  "importSorter.importStringConfiguration.tabSize": 2,
-
   "js/ts.implicitProjectConfig.experimentalDecorators": true,
   "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
 
@@ -84,6 +80,9 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.tokenColorCustomizations": {
     "[Tokyo Night]": {
       // or "[Tokyo Night Storm]"
@@ -109,6 +108,9 @@
     }
   },
   "go.toolsManagement.autoUpdate": true,
-  "editor.fontSize": 14
+  "editor.fontSize": 14,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
 
