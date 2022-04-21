@@ -203,9 +203,14 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "prettier.singleQuote": true,
   "editor.formatOnSave": true,
   "python.formatting.provider": "black",
-  "gitlens.currentLine.enabled": false
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "workbench.colorTheme": "Night Owl (No Italics)"
 }
 
