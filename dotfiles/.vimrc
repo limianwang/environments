@@ -32,6 +32,8 @@ Plugin 'posva/vim-vue'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'vim-python/python-syntax'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'sainnhe/everforest'
 call vundle#end()
 
 filetype plugin indent on
@@ -40,9 +42,13 @@ if !exists("g_syntax_on")
 	syntax enable
 endif
 
-set termguicolors
+if has('termguicolors')
+  set termguicolors
+endif
 
 let g:tokyonight_style = "night"
+let g:everforest_background = "hard"
+let g:everforest_better_performance = 1
 
 colorscheme tokyonight
 
