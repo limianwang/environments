@@ -24,6 +24,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'itchyny/vim-gitbranch'
 Plugin 'dense-analysis/ale'
 
+Plugin 'dart-lang/dart-vim-plugin'
+Plugin 'thosakwe/vim-flutter'
 Plugin 'fatih/vim-go'
 Plugin 'elzr/vim-json'
 Plugin 'majutsushi/tagbar'
@@ -115,6 +117,7 @@ set noswapfile
 set autoindent
 set smartindent
 set smartcase
+set smarttab
 
 set tabstop=2
 set shiftwidth=2
