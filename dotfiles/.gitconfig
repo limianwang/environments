@@ -28,6 +28,9 @@
 	hdiff = whatchanged -p --abbrev-commit --pretty=medium
 	cmp = diff develop
 	lb = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+  fi = "!f(){ git update-index --assume-unchanged ${1}; };f"
+  fni = "!f(){ git update-index --no-assume-unchanged ${1}; };f"
+  lsfi = "!git ls-files -v | grep '^[[:lower:]]'"
 [pull]
 	rebase = true
 [branch]
@@ -36,3 +39,5 @@
 	followRedirects = true
 [url "git@github.com"]
 	insteadOf = https://github.com/
+[fetch]
+	prune = true
