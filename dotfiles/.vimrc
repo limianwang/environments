@@ -52,7 +52,10 @@ let g:tokyonight_style = "night"
 let g:everforest_background = "hard"
 let g:everforest_better_performance = 1
 
-colorscheme tokyonight
+try
+  colorscheme tokyonight
+catch
+endtry
 
 " lightline
 let g:lightline = {
