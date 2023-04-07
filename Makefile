@@ -1,5 +1,5 @@
 env:
-	@brew install go
+	@brew install go ack pyenv pyenv-virtualenv nvm
 
 vim:
 	@mkdir -p ~/.vim && \
