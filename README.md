@@ -1,11 +1,9 @@
-My Configurations
-===========
+# My Configurations
 
 These include the configurations for development.
 
- - .bashrc
- - .zshrc
- - .vimrc
+- .zshrc
+- .vimrc
 
 # Setup Mac
 
