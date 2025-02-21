@@ -83,6 +83,11 @@ export PGDATA=/usr/local/var/postgres/
 
 #pyenv
 export PATH=$(pyenv root)/shims:$PATH
+# setup pyenv environment
+if type pyenv &>/dev/null; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
 
 # Go
 export GOPATH=~/go

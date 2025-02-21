@@ -1,0 +1,7 @@
+tap "homebrew/bundle"
+brew "ack"
+brew "go"
+brew "neovim"
+brew "nvm"
+brew "pyenv"
+brew "pyenv-virtualenv"
