@@ -85,7 +85,7 @@ export PGDATA=/usr/local/var/postgres/
 export PATH=$(pyenv root)/shims:$PATH
 # setup pyenv environment
 if type pyenv &>/dev/null; then
-  eval "$(pyenv init -)"
+  eval "$(pyenv init - zsh)"
   eval "$(pyenv virtualenv-init -)"
 fi
 
