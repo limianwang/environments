@@ -62,6 +62,8 @@ NO_COLOUR="\[\e[m\]";
 # nvm
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+source $(brew --prefix nvm)/etc/bash_completion.d/nvm
+
 function initNode()  {
 	nvm use default;
 }
