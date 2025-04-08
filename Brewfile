@@ -1,5 +1,6 @@
 tap "homebrew/bundle"
 brew "ack"
+brew "gnupg"
 brew "go"
 brew "hugo"
 brew "kubernetes-cli"
