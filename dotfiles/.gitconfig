@@ -39,3 +39,5 @@
   followRedirects = true
 [fetch]
   prune = true
+[commit]
+  gpgsign = true
