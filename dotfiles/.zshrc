@@ -40,7 +40,7 @@ function parse_git_dirty {
 
 function parse_git_stash {
     local count=$(git stash list 2>/dev/null | wc -l | tr -d ' ')
-    [[ $count -gt 0 ]] && echo "^{$count}"
+    [[ $count -gt 0 ]] && echo "^"
 }
 
 function list_deps {
