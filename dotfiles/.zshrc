@@ -4,6 +4,7 @@ setopt prompt_subst
 
 export ZSH="/Users/$USER/.oh-my-zsh"
 export EDITOR=vim
+export VISUAL=vim
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='0;32'
 
@@ -30,6 +31,14 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH";
 
 # Parse the git branch of the folder
+function parse_git_branch_and_stash() {
+  local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+  if [ -n "$branch" ]; then
+    local dirty=$(git diff --quiet 2>/dev/null || echo "*")
+    local stash=$(git stash list 2>/dev/null | wc -l | tr -d ' ')
+    echo "($branch$dirty | stash:$stash) "
+  fi
+}
 function parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(parse_git_dirty)$(parse_git_stash)) /"
 }
@@ -78,7 +87,7 @@ if [ $ITERM_SESSION_ID ]; then
    precmd
 fi
 
-export PROMPT='%10F{blue}%n%f@%F{blue}%m:%f%F{yellow}%~%f %F{red}$(parse_git_branch)%f(%F{red}%(1j.%j.0)%f)'$'\n''λ %F{yellow}=>%f '
+export PROMPT='%10F{blue}%n%f@%F{blue}%m:%f%F{yellow}%~%f %F{red}$(parse_git_branch_and_stash)%f(%F{red}%(1j.%j.0)%f)'$'\n''λ %F{yellow}=>%f '
 
 # Postgres
 alias pg='postgres'
